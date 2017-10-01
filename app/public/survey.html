@@ -37,7 +37,7 @@
 		<hr>
 
 		<h3>Question #1</h3>
-    <label class="" for="inlineFormCustomSelect">Your mind is always buzzing with unexplored ideas and plans.</label>
+    <label class="" for="q1">Your mind is always buzzing with unexplored ideas and plans.</label>
   	<select class="custom-select" id="q1">
     	<option selected>Choose...</option>
     	<option value="1">1 (Strongly Disagree)</option>
@@ -48,7 +48,7 @@
   	</select>
 
     <h3>Question #2</h3>
-		<label class="" for="inlineFormCustomSelect">Generally speaking, you rely more on your experience than your imagination.</label>
+		<label class="" for="q2">Generally speaking, you rely more on your experience than your imagination.</label>
   	<select class="custom-select" id="q2">
     	<option selected>Choose...</option>
     	<option value="1">1 (Strongly Disagree)</option>
@@ -59,7 +59,7 @@
   	</select>
 
     <h3>Question #3</h3>
-		<label class="" for="inlineFormCustomSelect">You find it easy to stay relaxed and focused even when there is some pressure.</label>
+		<label class="" for="q3">You find it easy to stay relaxed and focused even when there is some pressure.</label>
   	<select class="custom-select" id="q3">
     	<option selected>Choose...</option>
     	<option value="1">1 (Strongly Disagree)</option>
@@ -70,7 +70,7 @@
   	</select>
 
     <h3>Question #4</h3>
-		<label class="" for="inlineFormCustomSelect">You rarely do something just out of sheer curiosity.</label>
+		<label class="" for="q4">You rarely do something just out of sheer curiosity.</label>
   	<select class="custom-select" id="q4">
     	<option selected>Choose...</option>
     	<option value="1">1 (Strongly Disagree)</option>
@@ -81,7 +81,7 @@
   	</select>
 
     <h3>Question #5</h3>
-		<label class="" for="inlineFormCustomSelect">People can rarely upset you.</label>
+		<label class="" for="q5">People can rarely upset you.</label>
   	<select class="custom-select" id="q5">
     	<option selected>Choose...</option>
     	<option value="1">1 (Strongly Disagree)</option>
@@ -92,7 +92,7 @@
   	</select>
 
     <h3>Question #6</h3>
-		<label class="" for="inlineFormCustomSelect">It is often difficult for you to relate to other people’s feelings.</label>
+		<label class="" for="q6">It is often difficult for you to relate to other people’s feelings.</label>
   	<select class="custom-select" id="q6">
     	<option selected>Choose...</option>
     	<option value="1">1 (Strongly Disagree)</option>
@@ -103,7 +103,7 @@
   	</select>
 
     <h3>Question #7</h3>
-		<label class="" for="inlineFormCustomSelect">In a discussion, truth should be more important than people’s sensitivities.</label>
+		<label class="" for="q7">In a discussion, truth should be more important than people’s sensitivities.</label>
   	<select class="custom-select" id="q7">
     	<option selected>Choose...</option>
     	<option value="1">1 (Strongly Disagree)</option>
@@ -114,7 +114,7 @@
   	</select>
 
     <h3>Question #8</h3>
-		<label class="" for="inlineFormCustomSelect">You rarely get carried away by fantasies and ideas.</label>
+		<label class="" for="q8">You rarely get carried away by fantasies and ideas.</label>
   	<select class="custom-select" id="q8">
     	<option selected>Choose...</option>
     	<option value="1">1 (Strongly Disagree)</option>
@@ -125,7 +125,7 @@
   	</select>
 
     <h3>Question #9</h3>
-		<label class="" for="inlineFormCustomSelect">You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
+		<label class="" for="q9">You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
   	<select class="custom-select" id="q9">
     	<option selected>Choose...</option>
     	<option value="1">1 (Strongly Disagree)</option>
@@ -136,7 +136,7 @@
   	</select>
 
     <h3>Question #10</h3>
-		<label class="" for="inlineFormCustomSelect">You feel more energetic after spending time with a group of people.</label>
+		<label class="" for="q10">You feel more energetic after spending time with a group of people.</label>
   	<select class="custom-select" id="q10">
     	<option selected>Choose...</option>
     	<option value="1">1 (Strongly Disagree)</option>
@@ -148,9 +148,19 @@
 <hr>
   	<button type="submit" class="btn btn-primary">Submit</button>
 	</form>
-</body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="assets/javascript/app.js"></script>
+<script>
+	    $("#submit").on("click", function(){
+	    	var userData = {
+	    		name: $("#name").val(),
+	    		photo: $("#photo").val(),
+	    		scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
+	    	};
+	    	console.log(userData);
+	    });
+</script>
+</body>
 
 </html>
