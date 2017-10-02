@@ -2,14 +2,14 @@ var allFriends = require('../data/friends.js');
 
 module.exports = function(app){
   app.get('/api/friends', function(req,res){
-    res.json(allfriends);
+    res.json(allFriends);
   });
 
   app.post('/api/friends', function(req,res){
     var newUser = req.body;
     var absoluteDiff = [];
 
-    for(var i = 0; i < allfriends.length; i++) {
+    for(var i = 0; i < allFriends.length; i++) {
       var currentFriend = allFriends[i];
       var diffTotal = 0;
 
@@ -19,16 +19,16 @@ module.exports = function(app){
       }
       absoluteDiff[i] = diffTotal;
     }
-    var bfIdentified = absoluteDiff[0];
+    var bfFirstPotential = absoluteDiff[0];
     var bestFriend = 0;
 
     for(var k=0; k<absoluteDiff.length; k++){
-      if(absoluteDiff[k] <= allFriends[bfIdentified]){
+      if(absoluteDiff[k] < bfFirstPotential){
         bestFriend = k;
       };
     };
-    res.json(bfIdentified);
-    allfriends.push(req.body);
+    allFriends.push(newUser);
+    res.json(allFriends[bestFriend]);
 
   });
 };
