@@ -1,0 +1,33 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "engines": {
+    "node": "8.1.1",
+    "npm": "5.3.0"
+  },
+  "description": "My Friend Finder App",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcal588/friendfinder.git"
+  },
+  "keywords": [
+    "friends"
+  ],
+  "author": "David Calderon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dcal588/friendfinder/issues"
+  },
+  "homepage": "https://github.com/dcal588/friendfinder#readme"
+}
